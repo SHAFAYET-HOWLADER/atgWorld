@@ -6,6 +6,9 @@
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
 }
+.post_route{
+    margin-left: -30px;
+}
 .route_left ul li:first-child{
     font-size: 16px;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -29,11 +32,14 @@
 .post_route{
     position: relative;
 }
+.create_space{
+    margin-bottom: 98px;
+}
 .post_route::after{
     position: absolute;
     content: "";
     height: 1px;
-    width: 1085px;
+    width: 1115px;
     background-color: #E0E0E0;
     left: 30px;
     top: 50px;
@@ -41,7 +47,7 @@
 .post_route::before{
     position: absolute;
     content: "";
-    height: 3px;
+    height: 2px;
     width: 93px;
     background-color: rgba(0, 0, 0, 1);
     left: 30px;
@@ -157,4 +163,36 @@
     font-size: 13px;
     color: #E56135;
     font-family: 'IBM Plex Sans', sans-serif;
+}
+#applyJob{
+    color: #02B875;
+}
+#job_space{
+    margin-top: 20px !important;
+    font-size: 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000;
+}
+.filter_area{
+    padding-top: 70px;
+}
+.filter_name span{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+.filter_text{
+   border-bottom: 1px solid  #B8B8B8;
+   padding-bottom: 10px;
+}
+.filter_area p{
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+   padding-top: 32px;
+   line-height: 16px;
 }

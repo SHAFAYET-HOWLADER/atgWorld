@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from './Banner'
 import DisplayPost from './DisplayPost'
 import Menu from './Menu'
+import SingInModal from './SingInModal'
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
        <Menu/>
        <Banner/>
        <DisplayPost/>
+       <SingInModal/>
     </>
   )
 }

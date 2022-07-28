@@ -3,7 +3,9 @@ import "./DisplayPost.css"
 import { FaCaretDown} from "react-icons/fa";
 import { BsPeopleFill ,BsShareFill,BsThreeDots} from "react-icons/bs";
 import { AiOutlineEye } from "react-icons/ai";
-import { BiCalendarEvent } from "react-icons/bi";
+import { RiErrorWarningFill } from "react-icons/ri";
+import { CgFolder } from "react-icons/cg";
+import { BiCalendarEvent,BiPencil } from "react-icons/bi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import nature_img from "../images/nature_one.png";
 import shatter_img from "../images/shatter.png";
@@ -11,10 +13,12 @@ import car_img from "../images/car.png";
 import people_one from  "../images/people_one.png";
 import people_two from  "../images/people_two.png";
 import people_three from  "../images/people_three.png";
+import people_four from  "../images/people_four.png";
 const DisplayPost = () => {
      const [threeDot, setThreeDot] = useState(false)
      const [threeDot2, setThreeDot2] = useState(false)
      const [threeDot3, setThreeDot3] = useState(false)
+     const [threeDot4, setThreeDot4] = useState(false)
      const showDots = ()=>{
           if(threeDot==false){
                setThreeDot(true)
@@ -39,6 +43,14 @@ const DisplayPost = () => {
                setThreeDot3(false)
           }
      }
+     const showDots4 = ()=>{
+          if(threeDot4==false){
+               setThreeDot4(true)
+          }
+          else{
+               setThreeDot4(false)
+          }
+     }
   return (
     <section id="display_post">
          <div className="container">
@@ -57,7 +69,8 @@ const DisplayPost = () => {
                              <button className='border-0 post_btn_two'><BsPeopleFill/>&nbsp;&nbsp;Join Group</button>
                        </div>
               </div>
-              <div className='post_one'>
+            <div className='d-flex justify-content-between'>
+            <div className='post_one'>
                     <div className='post_one_items'>
                           <img className='post_one_img' src={nature_img} alt="nature_img" />
                           <div className='post_one_content'>
@@ -96,6 +109,21 @@ const DisplayPost = () => {
                           </div>
                     </div>
               </div>
+              <div className='filter_area'>
+                      <div className='d-flex justify-content-between align-items-center filter_text'>
+                         <div className='filter_name'>
+                              <MdOutlineLocationOn/>
+                              <span>Noida, India</span>
+                         </div>
+                         <div>
+                         <BiPencil/>
+                         </div>
+                      </div>
+                      <div>
+                         <p><RiErrorWarningFill/>&nbsp;Your location will help us serve better<br/> and extend a personalised experience.</p>
+                      </div>
+              </div>
+            </div>
               <div className='post_one'>
                     <div className='post_one_items'>
                           <img className='post_one_img' src={shatter_img} alt="nature_img" />
@@ -157,6 +185,7 @@ const DisplayPost = () => {
                                 <div className='meetUp d-flex align-items-center'>
                                   <div className='d-flex justify-content-center align-items-center'>
                                     <BiCalendarEvent/>
+                                    &nbsp;
                                      <span>Fri, 12 Oct, 2018</span>
                                   </div>
                                   <div className='d-flex justify-content-center align-items-center'>
@@ -181,6 +210,55 @@ const DisplayPost = () => {
                                              </div>
                                         </div>
                                  </div>
+                          </div>
+                    </div>
+              </div>
+              <div className='post_one create_space'>
+                    <div className='post_one_items'>
+                          <div className='post_one_content'>
+                               <div className='post_one_heading'>
+                               <p id="job_space">💼️ Job</p>
+                                   <div className='d-flex justify-content-between'>
+                                    <h4>Software Developer</h4>  
+                                   <div className='threeDotsArea'>
+                                   <span onClick={showDots4} className={threeDot4?"bg-light py-2 px-3":"bg-white py-2 px-3"}><BsThreeDots/></span>
+                                     {threeDot4&&<div className='threeDotOptions'>
+                                         <ul>
+                                             <li>Edit</li>
+                                             <li>report</li>
+                                             <li>option 3</li>
+                                         </ul>
+                                      </div>}                        
+                                   </div>
+                                   </div>                               
+                                <div className='meetUp d-flex align-items-center'>
+                                  <div className='d-flex justify-content-center align-items-center'>
+                                    <CgFolder/>
+                                    &nbsp;
+                                     <span>Innovaccer Analytics Private Ltd.</span>
+                                  </div>
+                                  <div className='d-flex justify-content-center align-items-center'>
+                                    <MdOutlineLocationOn/>
+                                     <span>Noida, India</span>
+                                  </div>
+                                </div>
+                                <div className='visit_now'>
+                                   <button id='applyJob'>Apply on Timesjobs</button>
+                                  </div>
+                               </div>
+                                 <div className='post_one_review'>
+                                        <div className='review_left d-flex justify-content-center align-items-center'>
+                                              <img src={people_four} alt="people_png" />
+                                              <span>Joseph Gray</span>
+                                        </div>
+                                        <div className='review_right d-flex justify-content-center align-items-center'>
+                                             <AiOutlineEye/>
+                                             <span>1.4k views</span>
+                                             <div className='share_icon'>
+                                             <BsShareFill/>
+                                             </div>
+                                        </div>
+                                 </div>                          
                           </div>
                     </div>
               </div>
